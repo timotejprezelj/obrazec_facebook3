@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pri.css">
+    <link rel="icon" type="image/png" href="logo.png" />
+    <title>Prijava v Facebook</title>
+
+    <!-- SweetAlert2 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">facebook</div>
+
+        <div class="prijava">
+            <h2>Prijava v Facebook</h2>
+
+            <input type="text" id="podatki" class="podatki" placeholder="E-poštni naslov ali telefonska številka">
+            <input type="password" id="geslo" class="podatki" placeholder="Geslo">
+
+            <button class="login-gumb" id="loginBtn">Prijava</button>
+
+            <div class="link">
+                <a href="https://www.facebook.com/login/identify/?ctx=recover&ars=facebook_login&from_login_screen=0">Ste pozabili račun?</a> · 
+                <a href="registracija.html">Pridruži se Facebooku</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("loginBtn").addEventListener("click", function() {
+            const email = document.getElementById("podatki").value;
+            const password = document.getElementById("geslo").value;
+
+            if(email === "" || password === "") {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Napaka',
+                    text: 'Prosimo, izpolnite vsa polja!'
+                });
+            } else {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Prijava uspešna',
+                    text: 'Dobrodošli nazaj na Facebook!'
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+

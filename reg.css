@@ -1,0 +1,123 @@
+ body {
+    background: #f0f2f5;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    font-size: 56px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #1877f2;
+}
+
+.register {
+    background: #fff;
+    width: 430px;
+    padding: 20px 25px;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.register h1 {
+    text-align: center;
+    margin: 5px 0;
+}
+
+.register p {
+    text-align: center;
+    color: #606770;
+    margin-top: -5px;
+}
+
+.imena {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.imena input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccd0d5;
+    font-size: 15px;
+}
+
+.label {
+    display: block;
+    font-size: 12px;
+    color: #606770;
+    margin-top: 15px;
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.menu select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccd0d5;
+    background: white;
+}
+
+.spol {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.spol-izbira{
+    border: 1px solid #ccd0d5;
+    border-radius: 6px;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+}
+
+.podatki {
+    width: 95%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccd0d5;
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+
+
+.primary-gumb {
+    width: 60%;
+    margin: 15px auto 10px;
+    display: block;
+    padding: 12px;
+    background: #42b72a;
+    color: white;
+    font-size: 18px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.primary-gumb:hover {
+    background: #36a420;
+}
+
+.login-link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #1877f2;
+    text-decoration: none;
+    font-size: 15px;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pridruži se facebooku</title>
+    <link rel="stylesheet" href="reg.css">
+    <link rel="icon" type="image/png" href="logo.png" />
+    <!-- SweetAlert2 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+<div class="logo">facebook</div>
+
+<div class="register">
+    <h1>Ustvari nov račun</h1>
+    <p>Je hitro in enostavno.</p>
+
+    <div class="imena">
+        <input type="text" id="ime" placeholder="Ime">
+        <input type="text" id="priimek" placeholder="Priimek">
+    </div>
+
+    <label class="label">Datum rojstva</label>
+    <div class="menu">
+        <select id="dan">
+            <option>1</option><option>2</option><option>3</option><option>4</option>
+            <option>5</option><option>6</option><option>7</option><option>8</option>
+            <option>9</option><option>10</option><option>11</option><option>12</option>
+            <option>13</option><option>14</option><option>15</option><option>16</option>
+            <option>17</option><option>18</option><option>19</option><option>20</option>
+            <option>21</option><option>22</option><option>23</option><option>24</option>
+            <option>25</option><option>26</option><option>27</option><option>28</option>
+            <option>29</option><option>30</option><option>31</option>
+        </select>
+
+        <select id="mesec">
+            <option>Jan</option><option>Feb</option><option>Mar</option>
+            <option>Apr</option><option>Maj</option><option>Jun</option>
+            <option>Jul</option><option>Avg</option><option>Sep</option>
+            <option>Okt</option><option>Nov</option><option>Dec</option>
+        </select>
+
+        <select id="leto">
+            <option>2012</option><option>2011</option><option>2010</option>
+            <option>2009</option><option>2008</option><option>2007</option>
+            <option>2006</option><option>2005</option><option>2004</option>
+            <option>2003</option>
+        </select>
+    </div>
+
+    <label class="label">Spol</label>
+    <div class="spol">
+        <label class="spol-izbira">
+            Ženska <input type="radio" name="spol" value="Ženska">
+        </label>
+        <label class="spol-izbira">
+            Moški <input type="radio" name="spol" value="Moški">
+        </label>
+        <label class="spol-izbira">
+            Po meri <input type="radio" name="spol" value="Po meri">
+        </label>
+    </div>
+
+    <input type="text" id="kontakt" placeholder="Številka mobilnega telefona ali e-poštni naslov" class="podatki">
+    <input type="password" id="geslo" placeholder="Novo geslo" class="podatki">
+
+    <button class="primary-gumb" id="registerBtn">Pridruži se</button>
+
+    <a href="index.html" class="login-link">Ali že imaš račun?</a>
+</div>
+
+<script>
+    document.getElementById("registerBtn").addEventListener("click", function() {
+        const ime = document.getElementById("ime").value;
+        const priimek = document.getElementById("priimek").value;
+        const kontakt = document.getElementById("kontakt").value;
+        const geslo = document.getElementById("geslo").value;
+        const spol = document.querySelector('input[name="spol"]:checked');
+
+        if(ime === "" || priimek === "" || kontakt === "" || geslo === "" || !spol) {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Napaka',
+                text: 'Prosimo, izpolnite vsa polja!'
+            });
+        } else {
+            Swal.fire({
+                icon: 'success',
+                title: 'Registracija uspešna',
+                text: 'Vaš račun je bil ustvarjen!'
+            });
+        }
+    });
+</script>
+
+</body>
+</html>
